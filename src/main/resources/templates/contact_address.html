@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style_contact_address.css" media="all" />
+  </head>
+  <body onload="showDate();">
+    <header class="header">
+      <nav class="global_nav">
+        <ul>
+          <li><a href="./kintai_input.html" class="nav_item">勤怠入力</a></li>
+          <li><a href="./workplace.html" class="nav_item">勤務場所登録</a></li>
+          <li><a href="./contact_address.html" class="nav_item">連絡先登録</a></li>
+          <li><a href="./attendance_list.html" class="nav_item">勤怠履歴一覧表示</a></li>
+          <li><a href="./state_list.html" class="nav_item">勤怠状況一覧</a></li>
+          <li><a href="./workplace_list.html" class="nav_item">勤務場所一覧</a></li>
+          <li><a href="./login.html" class="nav_item">ログアウト</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h2 id="title">連絡先登録</h2>
+    <form id="form">
+      <table>
+          <th>電話番号</th>
+          <th><input type="text" name="tel" placeholder="000-0000-0000"></th>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <th><input type="text" name="mail" placeholder="○○○○＠○○.○○"></th>
+        </tr>
+        <tr><th>　</th></tr>
+        <tr>
+          <th>郵便番号</th>
+          <th><input type="text" name="post" placeholder="○○○-○○○○" onkeyup="AjaxZip3.zip2addr(this,'','ken','shi');"></th>
+        </tr>
+        <tr>
+          <th>都道府県</th>
+          <th><input type="text" name="ken" placeholder="○○県"></th>
+        </tr>
+        <tr>
+          <th>市区町村</th>
+          <th><input type="text" name="shi" placeholder="○○市○○町"></th>
+        </tr>
+        <tr>
+          <th>丁目番地</th>
+          <th><input type="text" name="tho" placeholder="○丁目○○"></th>
+        </tr>
+        <tr>
+          <th>建物、部屋番号</th>
+          <th><input type="text" name="ie" placeholder="○○マンション○○○号室"></th>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <th><textarea cols="30" rows="5" placeholder="備考を入力して下さい。"></textarea></th>
+        </tr>
+      </table>
+      <input id="btm" type="submit" value="登録">
+    </form>
+  </body>
+</html>
